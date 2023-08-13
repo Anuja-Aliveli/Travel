@@ -163,16 +163,7 @@ app.put("/forgot/reset", async (req, res) => {
 
 // travel
 app.get("/", async (req, res) => {
-  try {
-    const displayDetails = await reviewsCollection
-      .find({ review_id: { $in: [5, 6] } })
-      .toArray();
-    res.status(200).json({ results: displayDetails });
-  } catch (error) {
-    res
-      .status(500)
-      .json({ error: "Internal Server Error", errMsg: error.message });
-  }
+  res.status(200).json({ message: "welcome to the server" });
 });
 
 // middleware
@@ -284,29 +275,29 @@ app.get("/packages/:id", verifyToken, async (req, res) => {
     let { id } = req.params;
     id = parseInt(id);
     const username = req.username;
-    
+
     const userIdObj = await userCollection.findOne(
       { username: username },
       { projection: { _id: 0, userId: 1 } }
     );
     const userId = userIdObj.userId;
-    
+
     const package = await packagesCollection.findOne(
       { id: id },
       { projection: { _id: 0, bio: 0 } }
     );
-    
-    const reviews = await feedbackCollection.find(
-      { userId: userId },
-      { projection: { _id: 0 } }
-    ).toArray();
-    
+
+    const reviews = await feedbackCollection
+      .find({ userId: userId }, { projection: { _id: 0 } })
+      .toArray();
+
     res.status(200).json({ package: package, reviews: reviews });
   } catch (err) {
-    res.status(500).json({ error: "Internal server error", errorMsg: err.message });
+    res
+      .status(500)
+      .json({ error: "Internal server error", errorMsg: err.message });
   }
 });
-
 
 // feedback
 app.post("/packages/:id/feedback/", verifyToken, async (req, res) => {
@@ -337,7 +328,7 @@ app.post("/bookings", verifyToken, async (req, res) => {
   try {
     const bookingDetails = req.body;
     const username = req.username;
-    
+
     const userIdObj = await userCollection.findOne(
       { username: username },
       { projection: { _id: 0, userId: 1 } }
@@ -347,10 +338,11 @@ app.post("/bookings", verifyToken, async (req, res) => {
     await bookingsCollection.insertOne({ ...bookingDetails, username, userId });
     res.status(200).json({ message: "Tour Booked" });
   } catch (err) {
-    res.status(500).json({ error: "Internal server problem", errorMsg: err.message });
+    res
+      .status(500)
+      .json({ error: "Internal server problem", errorMsg: err.message });
   }
 });
-
 
 // bookings
 app.get("/bookings", verifyToken, async (req, res) => {
