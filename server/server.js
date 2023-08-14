@@ -121,7 +121,7 @@ app.post("/login", async (req, res) => {
 // Question
 app.get("/forgot/question", async (req, res) => {
   try {
-    const { username } = req.body;
+    const { username } = req.query;
     const userDetails = await userCollection.findOne(
       { username: username },
       { projection: { username: 1, question: 1, answer: 1 } }

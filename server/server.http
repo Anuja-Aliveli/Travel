@@ -18,12 +18,8 @@ Content-Type: application/json
     "password": "adam123"
 }
 ###
-GET https://anujatravelserver.onrender.com/forgot/question
+GET https://anujatravelserver.onrender.com/forgot/question?username=Anuja
 Content-Type: application/json
-
-{
-    "username": "adam"
-}
 ###
 PUT https://anujatravelserver.onrender.com/forgot/reset
 Content-Type: application/json
