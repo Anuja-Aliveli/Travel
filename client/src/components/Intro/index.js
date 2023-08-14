@@ -7,6 +7,7 @@ import {
   FaPlane,
 } from 'react-icons/fa'
 import {GiLightBackpack, GiCampingTent, GiCampfire} from 'react-icons/gi'
+import HeaderMain from '../HeaderMain'
 import Footer from '../Footer'
 import './index.css'
 
@@ -32,28 +33,6 @@ const results = [
 ]
 
 const Intro = () => {
-  const navContainer = () => (
-    <div className="nav-intro-container">
-      <p className="logo">
-        <b>
-          Tr<span>av</span>el
-        </b>
-      </p>
-      <div>
-        <Link to="/login">
-          <button type="button" className="login">
-            Login
-          </button>
-        </Link>
-        <Link to="/register">
-          <button type="button" className="signup">
-            Sign Up
-          </button>
-        </Link>
-      </div>
-    </div>
-  )
-
   const renderIntro = () => (
     <>
       <div className="success-container" key={results[0].reviewId}>
@@ -147,7 +126,7 @@ const Intro = () => {
 
   return (
     <div className="intro-container">
-      {navContainer()}
+      <HeaderMain />
       <div className="start-section">
         <p className="start-head">Take only memories, leave only footprints.</p>
         <p className="start-para">Choose your destinations</p>

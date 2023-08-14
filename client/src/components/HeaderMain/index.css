@@ -1,0 +1,43 @@
+.nav-intro-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  height: 10vh;
+  font-size: 25px;
+  font-family: 'Roboto';
+  width: 100%;
+}
+.logo {
+  color: hsl(26, 96%, 50%);
+}
+.logo span {
+  color: white;
+}
+.login {
+  background-color: transparent;
+  border: 1px solid hsl(26, 96%, 50%);
+  color: hsl(26, 96%, 50%);
+  border-radius: 10px;
+  margin-right: 20px;
+  font-size: 18px;
+  height: 30px;
+  width: 80px;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+.signup {
+  background-color: hsl(26, 96%, 50%);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  margin-right: 20px;
+  font-size: 18px;
+  height: 30px;
+  width: 100px;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
