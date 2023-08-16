@@ -276,21 +276,15 @@ app.get("/packages/:id", verifyToken, async (req, res) => {
     id = parseInt(id);
     const username = req.username;
 
-    const userIdObj = await userCollection.findOne(
-      { username: username },
-      { projection: { _id: 0, userId: 1 } }
-    );
-    const userId = userIdObj.userId;
-
     const package = await packagesCollection.findOne(
       { id: id },
       { projection: { _id: 0, bio: 0 } }
     );
 
-    const reviews = await feedbackCollection
-      .find({ userId: userId }, { projection: { _id: 0 } })
+    let reviews = await feedbackCollection
+      .find({ packageId: id }, { projection: { _id: 0 } })
       .toArray();
-
+    
     res.status(200).json({ package: package, reviews: reviews });
   } catch (err) {
     res

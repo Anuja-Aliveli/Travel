@@ -35,19 +35,19 @@ Content-Type: application/json
 ###
 GET https://anujatravelserver.onrender.com/home/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW0iLCJpYXQiOjE2OTE3NDMyODd9.u95PkuuYow8EZUWWQzDvw9C5fbAVRbJal6KkOMkqVj4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFudWphIiwiaWF0IjoxNjkyMTgxNDUyfQ.YjvkMeI-cB2pMi02lgPQgTyilAIsIxUAsFLko8bpOTU
 ###
 GET https://anujatravelserver.onrender.com/packages/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW0iLCJpYXQiOjE2OTE3NDMyODd9.u95PkuuYow8EZUWWQzDvw9C5fbAVRbJal6KkOMkqVj4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFudWphIiwiaWF0IjoxNjkyMTgxNDUyfQ.YjvkMeI-cB2pMi02lgPQgTyilAIsIxUAsFLko8bpOTU
 ###
-GET https://anujatravelserver.onrender.com/packages/1
+GET http://localhost:5000/packages/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW0iLCJpYXQiOjE2OTE3NDMyODd9.u95PkuuYow8EZUWWQzDvw9C5fbAVRbJal6KkOMkqVj4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFudWphIiwiaWF0IjoxNjkyMTgxNDUyfQ.YjvkMeI-cB2pMi02lgPQgTyilAIsIxUAsFLko8bpOTU
 ###
 POST https://anujatravelserver.onrender.com/packages/1/feedback
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW0iLCJpYXQiOjE2OTE3NDMyODd9.u95PkuuYow8EZUWWQzDvw9C5fbAVRbJal6KkOMkqVj4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFudWphIiwiaWF0IjoxNjkyMTgxNDUyfQ.YjvkMeI-cB2pMi02lgPQgTyilAIsIxUAsFLko8bpOTU
 
 {
     "rating": 4.5,
@@ -56,7 +56,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkY
 ###
 POST https://anujatravelserver.onrender.com/bookings/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW0iLCJpYXQiOjE2OTE3NDMyODd9.u95PkuuYow8EZUWWQzDvw9C5fbAVRbJal6KkOMkqVj4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFudWphIiwiaWF0IjoxNjkyMTgxNDUyfQ.YjvkMeI-cB2pMi02lgPQgTyilAIsIxUAsFLko8bpOTU
 
 {
     "location": "Andaman",
@@ -67,4 +67,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkY
 ###
 GET https://anujatravelserver.onrender.com/bookings/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW0iLCJpYXQiOjE2OTE3NDMyODd9.u95PkuuYow8EZUWWQzDvw9C5fbAVRbJal6KkOMkqVj4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFudWphIiwiaWF0IjoxNjkyMTgxNDUyfQ.YjvkMeI-cB2pMi02lgPQgTyilAIsIxUAsFLko8bpOTU
