@@ -276,7 +276,7 @@ app.get("/packages/:id", verifyToken, async (req, res) => {
     id = parseInt(id);
     const username = req.username;
 
-    const package = await packagesCollection.findOne(
+    const packageDetails = await packagesCollection.findOne(
       { id: id },
       { projection: { _id: 0, bio: 0 } }
     );
@@ -284,8 +284,8 @@ app.get("/packages/:id", verifyToken, async (req, res) => {
     let reviews = await feedbackCollection
       .find({ packageId: id }, { projection: { _id: 0 } })
       .toArray();
-    
-    res.status(200).json({ package: package, reviews: reviews });
+
+    res.status(200).json({ packageDetails: packageDetails, reviews: reviews });
   } catch (err) {
     res
       .status(500)
