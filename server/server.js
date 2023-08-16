@@ -227,8 +227,8 @@ app.get("/home", verifyToken, async (req, res) => {
 // Package list
 app.get("/packages", verifyToken, async (req, res) => {
   try {
-    const nationalIds = Array.from({ length: 10 }, (_, i) => i + 1);
-    const internationalIds = Array.from({ length: 10 }, (_, i) => i + 11);
+    const nationalIds = Array.from({ length: 12 }, (_, i) => i + 1);
+    const internationalIds = Array.from({ length: 12 }, (_, i) => i + 13);
     const national = await packagesCollection
       .aggregate([
         {
