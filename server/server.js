@@ -308,6 +308,7 @@ app.post("/packages/:id/feedback/", verifyToken, async (req, res) => {
       userId,
       rating,
       review,
+      packageId: parseInt(id),
     });
     res.status(200).json({ message: "Inserted Successfully" });
   } catch (err) {
