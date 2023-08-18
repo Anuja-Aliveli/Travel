@@ -7,6 +7,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Home from './components/Home'
 import Packages from './components/Packages'
 import PackageView from './components/PackageView'
+import Bookings from './components/Bookings'
 
 const App = () => (
   <Switch>
@@ -16,6 +17,7 @@ const App = () => (
     <ProtectedRoute exact path="/home" component={Home} />
     <ProtectedRoute exact path="/packages" component={Packages} />
     <ProtectedRoute exact path="/packages/:id" component={PackageView} />
+    <ProtectedRoute exact path="/bookings" component={Bookings} />
   </Switch>
 )
 export default App

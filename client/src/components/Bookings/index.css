@@ -1,0 +1,51 @@
+.bookings-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto';
+}
+.bookings-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: center;
+}
+.tour-details {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: transparent;
+  width: 25%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.205);
+  text-align: center;
+}
+.book {
+  font-size: 20px;
+  color: black;
+}
+.book b {
+  color: hsl(26, 96%, 50%);
+}
+@media (max-width:576px) {
+    .bookings-main {
+        width: 100%;
+    }
+    .tour-details {
+        width: 100%;
+        margin-right: 0;
+        margin: 20px;
+    }
+}
+.margin {
+    margin-bottom: 0;
+}
+.empty-container {
+    height: 55vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}

@@ -308,7 +308,7 @@ app.post("/packages/:id/feedback/", verifyToken, async (req, res) => {
       userId,
       rating,
       review,
-      username,      
+      username,
       packageId: parseInt(id),
     });
     res.status(200).json({ message: "Inserted Successfully" });
@@ -359,4 +359,29 @@ app.get("/bookings", verifyToken, async (req, res) => {
       .json({ error: "Internal server problem", errorMsg: err.message });
   }
 });
+
+// Delete Package
+app.delete("/cancel", verifyToken, async (req, res) => {
+  try {
+    const { username } = req;
+    const { date, location } = req.query;
+    
+    const deleteTour = await bookingsCollection.deleteOne({
+      username: username,
+      date: date,
+      location: location,
+    });
+
+    if (deleteTour.deletedCount === 1) {
+      res.status(200).json({ message: "Trip Cancelled Successfully" });
+    } else {
+      res.status(404).json({ error: "Booking not found" });
+    }
+  } catch (err) {
+    res
+      .status(500)
+      .json({ error: "Internal Server Error", errMsg: err.message });
+  }
+});
+
 module.exports = app;
