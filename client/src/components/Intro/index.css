@@ -41,7 +41,7 @@
 .start-section {
   background-image: url('https://res.cloudinary.com/dgkw0cxnh/image/upload/v1691834014/Travel/start/intro1_zxga9w.jpg');
   background-size: 100% 100%;
-  height: 60vh;
+  height: 65vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -67,12 +67,14 @@
   outline: none;
   cursor: pointer;
   height: 30px;
-  width: 150px;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-top: 15px;
   border-radius: 8px;
 }
 .popular {
-  color: black;
+  color: hsl(26, 96%, 50%);
   font-size: 35px;
   margin-top: 20px;
   margin-bottom: 0;
@@ -99,7 +101,7 @@
   padding: 20px;
 }
 .content-head {
-  color: black;
+  color: hsl(26, 96%, 50%);
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -159,6 +161,12 @@
   width: 90%;
   align-self: center;
   padding: 10px;
+}
+.service{
+    font-size: 35px;
+    color: hsl(26, 96%, 50%);
+    text-align: center;
+    font-weight: bold;
 }
 .service-list {
   padding: 0;

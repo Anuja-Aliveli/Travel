@@ -86,7 +86,7 @@ const Intro = () => {
 
   const services = () => (
     <div className="service-section">
-      <p className="start-head">Services</p>
+      <p className="service">Our Services</p>
       <ul className="service-list">
         <li>
           <FaHiking className="icon" />

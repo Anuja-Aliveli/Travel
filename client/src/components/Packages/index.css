@@ -1,0 +1,39 @@
+.packages-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto';
+}
+.tabs-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.tab {
+  width: 200px;
+}
+.tab:hover {
+    background-color: hsl(26,96%,50%);
+    color: white;
+    border: none;
+}
+.size {
+    flex-grow: 0;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 576px) {
+    .tabs-section {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 20px;
+    }
+    .tab {
+        margin-bottom: 20px;
+        width: 43%;        
+    }
+}

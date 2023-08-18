@@ -1,0 +1,199 @@
+.view-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto';
+  min-height: 100vh;
+  width: 100vw;
+}
+.package-view-section {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 80vh;
+  overflow: auto;
+}
+.package-content {
+  width: 60%;
+  margin-right: 20px;
+  height: auto;
+}
+.slide-container {
+  width: 100%;
+  height: 68vh;
+}
+
+.slick-image {
+  width: 100%;
+  height: 100%;
+}
+
+.package-detail-container {
+  margin-top: 40px;
+  min-height: 30vh;
+}
+
+.package-name span {
+  color: black;
+  font-weight: normal;
+}
+.package-detail-container ul {
+  padding: 0;
+}
+
+.package-name li {
+  color: black;
+  font-weight: normal;
+  margin-left: 20px;
+}
+
+.column {
+  display: flex;
+  list-style-type: none;
+}
+
+.center {
+  text-align: center;
+  font-size: 30px;
+}
+
+.booknow-container {
+  width: 40%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 30vh;
+}
+.full-size-skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+.plus-minus-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  height: 30px;
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+.persons {
+  color: black;
+  font-size: 20px;
+  margin-right: 20px;
+  font-weight: normal;
+  padding-top: 0;
+}
+.number {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.price {
+  font-size: 20px;
+  color: black;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 0px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.price span {
+  color: black;
+}
+hr {
+  color: black;
+  width: 300px;
+}
+.auto {
+  width: 300px;
+  margin: 10px;
+}
+.msg {
+  color: green;
+  font-size: 20px;
+}
+.style {
+  width: 100%;
+  margin-top: 20px;
+}
+.reviews-container-package {
+  display: flex;
+  flex-direction: column;
+  min-height: 25vh;
+}
+.review-person {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.name-rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.user-review {
+  margin-top: 0;
+  color: grey;
+  font-size: 16px;
+}
+.rating-icon {
+  display: flex;
+  align-items: center;
+}
+.username {
+  display: flex;
+  flex-direction: row;
+}
+.random-color {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .booknow-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .package-view-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .package-content {
+    width: 100%;
+    margin-right: 0px;
+    padding: 20px;
+  }
+  .slide-container {
+    width: 100%;
+    height: 40vh;
+  }
+  .slick-image {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import './index.css'
 import {FaFacebook, FaTwitter, FaInstagram} from 'react-icons/fa'
 
@@ -23,8 +24,16 @@ const Footer = () => (
           </div>
         </div>
         <div className="row">
-          <p className="white right">Sign Up</p>
-          <p className="white">Login</p>
+          <p className="white right">
+            <Link to="/register" className="link-class">
+              Sign Up
+            </Link>
+          </p>
+          <p className="white">
+            <Link to="/login" className="link-class">
+              Login
+            </Link>
+          </p>
         </div>
       </div>
       <div className="links-container-footer">
@@ -32,10 +41,26 @@ const Footer = () => (
           <p className="white link-head">
             <b>Links</b>
           </p>
-          <p className="white">Explore</p>
-          <p className="white">Home</p>
-          <p className="white">Packages</p>
-          <p className="white">Bookings</p>
+          <p className="white">
+            <Link to="/" className="link-class">
+              Explore{' '}
+            </Link>
+          </p>
+          <p className="white">
+            <Link to="/home" className="link-class">
+              Home{' '}
+            </Link>
+          </p>
+          <p className="white">
+            <Link to="/packages" className="link-class">
+              Packages{' '}
+            </Link>
+          </p>
+          <p className="white">
+            <Link to="/bookings" className="link-class">
+              Bookings{' '}
+            </Link>
+          </p>
         </div>
         <div>
           <p className="white link-head">
