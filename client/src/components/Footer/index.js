@@ -11,7 +11,9 @@ const Footer = () => (
             Tr<span className="white">av</span>el
           </b>
         </p>
-        <p className="white">Take Only Memories, Leave Only Footprints</p>
+        <p className="white" style={{textAlign: 'center'}}>
+          Take Only Memories, Leave Only Footprints
+        </p>
         <div className="icons">
           <div className="icon-container-footer">
             <FaFacebook className="icon-footer" />

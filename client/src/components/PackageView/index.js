@@ -25,7 +25,7 @@ class PackageView extends Component {
   state = {
     packageDetails: {},
     reviews: [],
-    date: '',
+    date: 'dd-mm-yyyy',
     price: 0,
     persons: 1,
     bookLoading: false,
@@ -199,7 +199,7 @@ class PackageView extends Component {
           bookLoading: false,
           bookMsg: data.message,
           price: packageDetails.price,
-          date: '',
+          date: 'dd-mm-yyyy',
           persons: 1,
         })
         setTimeout(() => {
@@ -232,7 +232,7 @@ class PackageView extends Component {
             value={date}
             type="date"
             className="input"
-            placeholder="Date"
+            placeholder="dd-mm-yyyy"
             onChange={this.onDate}
           />
           <div className="plus-minus-container">
