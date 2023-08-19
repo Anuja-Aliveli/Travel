@@ -57,7 +57,7 @@ class Register extends Component {
     event.preventDefault()
     this.setState({isLoading: true})
     const {username, name, gender, question, answer, password} = this.state
-    const url = `https://anujatravelserver.onrender.com/register/`
+    const url = `https://anujatravelserver.cyclic.cloud/register/`
     const bodyObj = {username, name, gender, question, answer, password}
     console.log(bodyObj)
     let isEmpty = false

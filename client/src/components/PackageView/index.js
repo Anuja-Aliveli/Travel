@@ -56,7 +56,7 @@ class PackageView extends Component {
     const {match} = this.props
     const {params} = match
     const {id} = params
-    const url = `https://anujatravelserver.onrender.com/packages/${id}`
+    const url = `https://anujatravelserver.cyclic.cloud/packages/${id}`
     const options = {
       method: 'GET',
       headers: {
@@ -172,7 +172,7 @@ class PackageView extends Component {
     const {price, date, persons, packageDetails} = this.state
     this.setState({bookLoading: true})
     const jwtToken = Cookies.get('jwt_token')
-    const url = `https://anujatravelserver.onrender.com/bookings/`
+    const url = `https://anujatravelserver.cyclic.cloud/bookings/`
     const bodyObj = {
       price: price + 200,
       date,
@@ -300,7 +300,7 @@ class PackageView extends Component {
     const {match} = this.props
     const {params} = match
     const {id} = params
-    const url = `https://anujatravelserver.onrender.com/packages/${id}/feedback`
+    const url = `https://anujatravelserver.cyclic.cloud/packages/${id}/feedback`
     const bodyObj = {rating: ratingCount, review: userReview}
     const options = {
       method: 'POST',

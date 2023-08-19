@@ -33,7 +33,7 @@ class Packages extends Component {
   getDetails = async () => {
     const jwtToken = Cookies.get('jwt_token')
     this.setState({loading: true})
-    const url = `https://anujatravelserver.onrender.com/packages/`
+    const url = `https://anujatravelserver.cyclic.cloud/packages/`
     const options = {
       method: 'GET',
       headers: {

@@ -26,7 +26,7 @@ class Bookings extends Component {
   getDetails = async () => {
     this.setState({loading: true})
     const jwtToken = Cookies.get('jwt_token')
-    const url = `https://anujatravelserver.onrender.com/bookings/`
+    const url = `https://anujatravelserver.cyclic.cloud/bookings/`
     const options = {
       method: 'GET',
       headers: {
@@ -58,7 +58,7 @@ class Bookings extends Component {
   onDelete = async (location, date) => {
     this.setState({deleteLoading: true})
     const jwtToken = Cookies.get('jwt_token')
-    const url = `https://anujatravelserver.onrender.com/cancel?location=${location}&date=${date}`
+    const url = `https://anujatravelserver.cyclic.cloud/cancel?location=${location}&date=${date}`
     const options = {
       method: 'DELETE',
       headers: {

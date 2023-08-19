@@ -23,7 +23,7 @@ class Home extends Component {
 
   getDetails = async () => {
     this.setState({isLoading: true})
-    const url = `https://anujatravelserver.onrender.com/home/`
+    const url = `https://anujatravelserver.cyclic.cloud/home/`
     const jwtToken = Cookies.get('jwt_token')
     const options = {
       method: 'GET',

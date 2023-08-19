@@ -50,7 +50,7 @@ class Login extends Component {
     const {password, confirmPassword, username} = this.state
     this.setState({pwdloading: true})
     if (password === confirmPassword) {
-      const url = `https://anujatravelserver.onrender.com/forgot/reset`
+      const url = `https://anujatravelserver.cyclic.cloud/forgot/reset`
       const bodyObj = {username, password}
       const options = {
         method: 'PUT',
@@ -96,7 +96,7 @@ class Login extends Component {
       alert('Please Enter Username')
       this.setState({userLoading: false})
     } else {
-      const url = `https://anujatravelserver.onrender.com/forgot/question?username=${username}`
+      const url = `https://anujatravelserver.cyclic.cloud/forgot/question?username=${username}`
       const response = await fetch(url)
       const data = await response.json()
       if (response.ok === true) {
@@ -125,7 +125,7 @@ class Login extends Component {
     event.preventDefault()
     this.setState({isLoading: true})
     const {username, password} = this.state
-    const url = `https://anujatravelserver.onrender.com/login/`
+    const url = `https://anujatravelserver.cyclic.cloud/login/`
     const bodyObj = {username, password}
     if (username === '' || username === '') {
       // eslint-disable-next-line no-alert
